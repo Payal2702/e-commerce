@@ -26,10 +26,10 @@
                     <div class="collapse navbar-collapse" id="collapsibleNavbar">
                         <ul class="navbar-nav" style="margin-left: auto;">
                             <li class="nav-item"> 
-                                <a class="nav-link ceramic2" href="#home">HOME</a>
+                                <a class="nav-link ceramic2" href="index.html">HOME</a>
                             </li>
                             <li class="nav-item"> 
-                                <a class="nav-link ceramic2" href="#about">ABOUT</a>
+                                <a class="nav-link ceramic2" href="about">ABOUT</a>
                             </li>
                             <li class="nav-item"> 
                                 <a class="nav-link ceramic2" href="#shop">SHOP</a>
@@ -223,7 +223,7 @@
                 <div class="row mb-5">
                     <div class="col-md-4">
                         <div class="picture">
-                        <img src="images/ceramic-cup.jpg" class="img-fluid mb-3">
+                        <img src="images/bottles.jpg" class="img-fluid mb-3">
                         </div>
                         <p class="text-secondary">Ceramic</p>
                         <h4 class="heading2">Ceramic Bottles</h4>
@@ -249,7 +249,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="picture">
-                        <img src="images/ceramic-cup.jpg" class="img-fluid mb-3">
+                        <img src="images/flask.jpg" class="img-fluid mb-3">
                         </div>
                         <p class="text-secondary">Ceramic</p>
                         <h4 class="heading2">Ceramic Drink Coasters</h4>
@@ -305,14 +305,27 @@
             </div>
            </section>
            <footer>
+            <div class="container-fluid">
+                <div class="row mb-5">
+                    <div class="col-md-6" style="background-color: #025048;">
+                        <img src="images/footer.jpg" class="img-fluid">
+                    </div>
+                    <div class="col-md-6" style="background-color: #025048;">
+                        <div class="px-5 py-5">
+                    <h1 id="heading" class="mb-5">Uncover the World of Ceramic Artistry Start Your Journey Here!</h1>
+                    <button type="button" class="btn btn-outline-light">SHOP NOW</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
             <nav class="navbar navbar-expand-md navbar-light bg-light">
                 <a class="navbar-brand" id="footer1" href="#">Ceramic Shop</a>
                     <ul class="navbar-nav ml-5" style="margin-left: auto;">
                         <li class="nav-item"> 
-                            <a class="nav-link" id="footer" href="#home">HOME</a>
+                            <a class="nav-link" id="footer" href="index.html">HOME</a>
                         </li>
                         <li class="nav-item"> 
-                            <a class="nav-link" id="footer" href="#about">ABOUT</a>
+                            <a class="nav-link" id="footer" href="about.html">ABOUT</a>
                         </li>
                         <li class="nav-item"> 
                             <a class="nav-link" id="footer" href="#shop">SHOP</a>
@@ -320,15 +333,29 @@
                         <li class="nav-item"> 
                             <a class="nav-link" id="footer" href="#contact">CONTACT</a>
                         </li>
-                        <li class="nav-item">
-                            <box-icon type='logo' name='facebook-circle'></box-icon>
-                            <box-icon type='logo' name='instagram'></box-icon>
-                        </li>
+                        <li class="nav-item ml-5" id="icons">
+                            <box-icon name='facebook-circle' type='logo' color='rgba(0,0,0,0.31)' ></box-icon>
+                            <box-icon name='twitter' type='logo' color='rgba(0,0,0,0.31)' ></box-icon>
+                            <box-icon name='instagram' type='logo' color='rgba(0,0,0,0.31)' ></box-icon>
+                            <box-icon name='youtube' type='logo' color='rgba(0,0,0,0.31)' ></box-icon>
+                            </li>
                     </ul>
                     </div>
             </nav>
            </footer>
-           <hr style="border: 1px dashed #ebf0ef ">
-       
+        <hr style="border: 1px ridge rgba(0,0,0,0.31)">
+
+
+
+
+        <script>
+            function abc(name){
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(name);
+            }
+            document.getElementById('displayName').textContent = abc('name') || 'N/A';
+            document.getElementById('displayEmail').textContent = abc('pass') || 'N/A';
+
+        </script>
     </body>
 </html>
