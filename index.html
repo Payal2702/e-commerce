@@ -15,6 +15,9 @@
 <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     </head>
     <body>
+        <button onclick="topFunction()" id="myBtn" class="btn btn-light">
+            <img src="images/arrowhead-up.png" height="30px" width="20px" style="color: white;">
+        </button>
         <header>
             <div class="container-fluid" style="background-color: #025048;">
                 <div class="container">
@@ -29,7 +32,7 @@
                                 <a class="nav-link ceramic2" href="index.html">HOME</a>
                             </li>
                             <li class="nav-item"> 
-                                <a class="nav-link ceramic2" href="about">ABOUT</a>
+                                <a class="nav-link ceramic2" href="about.html">ABOUT</a>
                             </li>
                             <li class="nav-item"> 
                                 <a class="nav-link ceramic2" href="#shop">SHOP</a>
@@ -63,7 +66,7 @@
         <section>
             <div class="container mt-5">
                 <p id="para3" class="mb-3">ABOUT CERAMIC SHOP</p>
-                <h1 class="heading2">The versatility of ceramics is what makes them truly remarkable, with their presence in various forms such as stoneware and porcelain.</h1>
+                <h3 class="heading2">The versatility of ceramics is what makes them truly remarkable, with their presence in various forms such as stoneware and porcelain.</h3>
                 <div class="row mt-5">
                     <div class="col-md-6">
                         <img src="images/about-01.jpg" class="img-fluid">
@@ -116,7 +119,8 @@
         <!-- next part  -->
          <div class="container mt-5">
             <p id="para4">MOST POPULAR</p>
-            <h1 class="heading2 mb-4">Discover the Latest Additions at Your Top Choice Flower Shop </h1>
+            <h3 class="heading2 mb-4">Discover the Latest Additions at Your Top Choice Flower Shop </h3>
+            <center>
             <div class="row">
                 <div class="col-md-4">
                     <div class="picture">
@@ -200,6 +204,7 @@
                     <p style="font-size: 18px;" class="mt-2"><s class="text-secondary">₹247.00</s> ₹217.00</p>
                 </div>
             </div>
+            </center>
          </div>
          <!-- next part  -->
          <section>
@@ -274,7 +279,7 @@
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <div class="col-md-6 mt-5">
+                        <div class="col-md-6 mt-5 mb-3">
                             <div class="bg-white px-3 py-3">
                                 <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
@@ -287,7 +292,7 @@
 
                             </div>
                         </div>
-                        <div class="col-md-6 mt-5">
+                        <div class="col-md-6 mt-5 mb-3">
                             <div class="bg-white px-3 py-3">
                                 <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
@@ -312,7 +317,7 @@
                     </div>
                     <div class="col-md-6" style="background-color: #025048;">
                         <div class="px-5 py-5">
-                    <h1 id="heading" class="mb-5">Uncover the World of Ceramic Artistry Start Your Journey Here!</h1>
+                    <h3 id="heading" class="mb-3">Uncover the World of Ceramic Artistry Start Your Journey Here!</h3>
                     <button type="button" class="btn btn-outline-light">SHOP NOW</button>
                     </div>
                     </div>
@@ -320,7 +325,7 @@
             </div>
             <nav class="navbar navbar-expand-md navbar-light bg-light">
                 <a class="navbar-brand" id="footer1" href="#">Ceramic Shop</a>
-                    <ul class="navbar-nav ml-5" style="margin-left: auto;">
+                    <ul class="navbar-nav" style="margin-left: auto;">
                         <li class="nav-item"> 
                             <a class="nav-link" id="footer" href="index.html">HOME</a>
                         </li>
@@ -349,6 +354,31 @@
 
 
         <script>
+            let mybutton = document.getElementById('myBtn');
+window.onscroll = function(){
+    scrollFunction()
+};
+function scrollFunction(){
+    if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+        mybutton.style.display = "block";
+    }
+    else{
+        mybutton.style.display = "none";
+    }
+}
+function topFunction(){
+    // document.body.scrollTop = 0;
+    // document.documentElement.scrollTop = 0;
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+
+
+
+
             function abc(name){
                 const urlParams = new URLSearchParams(window.location.search);
                 return urlParams.get(name);
