@@ -17,6 +17,9 @@
 <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     </head>
     <body>
+        <button onclick="topFunction()" id="myBtn">
+            <img src="images/arrow.png"  style="background-color: #025048;">
+        </button>
         <header>
             <div class="container-fluid" style="background-color: #025048;">
             <div class="container mb-5">
@@ -37,7 +40,7 @@
                                 <a class="nav-link ceramic2" href="shop.html">SHOP</a>
                             </li>
                             <li class="nav-item"> 
-                                <a class="nav-link ceramic2" href="#contact">CONTACT</a>
+                                <a class="nav-link ceramic2" href="contact.html">CONTACT</a>
                             </li>
                         </ul>
                         <img src="images/cart.png" style="height: 25px; width: 25px;" class="ml-4">
@@ -239,7 +242,7 @@
                     <a class="nav-link" id="footer" href="shop.html">SHOP</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="footer" href="#">CONTACT</a>
+                    <a class="nav-link" id="footer" href="contact.html">CONTACT</a>
                 </li>
                 <li class="nav-item ml-5" id="icons">
                 <box-icon name='facebook-circle' type='logo' color='rgba(0,0,0,0.31)' ></box-icon>
@@ -252,5 +255,28 @@
         <hr style="border: 1px ridge  #dee8e7;">
 
         </footer>
+
+
+
+        <script>
+            let mybutton = document.getElementById('myBtn');
+window.onscroll = function(){
+    scrollFunction()
+};
+function scrollFunction(){
+    if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+        mybutton.style.display = "block";
+    }
+    else{
+        mybutton.style.display = "none";
+    }
+}
+function topFunction(){
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+        </script>
         </body>
         </html>

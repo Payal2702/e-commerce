@@ -170,6 +170,8 @@
     right: 30px;
     z-index: 9999;
     transition: 1.0 ease;
+    border: none;
+    background-color: #025048;
   
   }
   #navbar{
@@ -183,5 +185,6 @@
     font-style: normal;
     color:#867d7d;
   }
+  
 
 
