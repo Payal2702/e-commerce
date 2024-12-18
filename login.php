@@ -24,10 +24,10 @@
           <div class="col-md-7">
             <h3>Login to <strong>CeramicShop</strong></h3>
             <p class="mb-4">Unearth the beauty of crockery.</p>
-            <form action="index.html" id="myForm">
+            <form action="login_data.php" method="post">
               <div class="form-group first">
                 <label for="username">Username</label>
-                <input type="text" class="form-control" name="name" placeholder="Email" id="username" required>
+                <input type="text" class="form-control" name="email" placeholder="Email" id="username" required>
               </div>
               <div class="form-group last mb-3">
                 <label for="password">Password</label>
@@ -36,7 +36,7 @@
               
               <div class="d-flex mb-5 align-items-center">
                 <label class="control control--checkbox mb-0"><span class="caption">Remember me</span>
-                  <input type="checkbox" checked="checked"/>
+                  <input type="checkbox" checked="checked" required>
                   <div class="control__indicator"></div>
                 </label>
                 <span class="ml-auto"><a href="#" class="forgot-pass">Forgot Password</a></span> 
@@ -52,29 +52,6 @@
     </div>
   </div>
 
-  <script>
-    $(document).ready(function(){
-      $('#myForm').on('submit', function(e){
-        e.preventDefault();
-        const formStore = $(this).serialize();
-
-        $.ajax({
-          url: 'index.html',
-          method: 'GET',
-          data: formStore,
-          success: function(res){
-            console.log(res);
-            window.location.href = 'index.html?' + formStore;
-          },
-          error: function (xhr, status, error){
-            console.log('Error:', error);
-          }
-
-        })
-      })
-    })
-
-  </script>
     
 </body>
 </html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    </head>
+    <body>
+
+
+
+        <script>
+            let xhr = new XMLHttpRequest();
+            xhr.open("GET" , "https://catfact.ninja/facts" , true)
+
+            xhr.onload = function(){
+                if(xhr.status === 200){
+                    console.log(xhr.responseText);
+                }
+                else{
+                    console.log("Not found");
+                }
+                xhr.onerror= function(){
+                    console.log('Error');
+                }
+            }
+            xhr.send();
+        </script>
+    </body>
+</html>
